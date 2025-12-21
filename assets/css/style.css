@@ -1,0 +1,113 @@
+:root {
+    --bg-deep: #020617;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-deep);
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
+#neural-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.glass-card {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    .glass-card:hover {
+        border-color: rgba(59, 130, 246, 0.5);
+        transform: translateY(-5px);
+        background: rgba(30, 41, 59, 0.8);
+    }
+
+.skill-chip {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #93c5fd;
+    transition: all 0.3s ease;
+}
+
+    .skill-chip:hover {
+        background: rgba(59, 130, 246, 0.3);
+        color: white;
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+        transform: scale(1.05);
+    }
+
+.section-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+
+.project-card-container {
+    perspective: 1000px;
+    height: 400px; 
+    width: 100%;
+}
+
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+    .project-card-inner.is-flipped {
+        transform: rotateY(180deg);
+    }
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1.5rem;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: rgba(30, 41, 59, 0.95);
+    border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3b82f6;
+    }

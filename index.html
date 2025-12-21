@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Bhaskar Chari - AI & ML Engineer.">
+    <title>Bhaskar Chari | AI & ML Engineer Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="selection:bg-blue-500/30">
+    <canvas id="neural-canvas"></canvas>
+
+    <nav class="fixed w-full z-50 glass-card py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter uppercase">BC<span class="text-blue-500">.</span>AI</span>
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#home" class="hover:text-blue-400 transition">Home</a>
+                <a href="#aboutme" class="hover:text-blue-400 transition">About</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#achievements" class="hover:text-blue-400 transition">Achievements</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center pt-24 px-6">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="leading-none">
+                    <h2 class="text-blue-400 font-semibold tracking-widest uppercase text-sm mb-1">Hello World!!</h2>
+                    <h2 class="text-blue-400 font-semibold tracking-widest uppercase text-sm">I'm</h2>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight">Bhaskar <span class="text-blue-500">Chari</span></h1>
+                <div class="border-l-4 border-blue-600 pl-6 space-y-2">
+                    <p class="text-xl font-semibold text-slate-300">AI & Machine Learning Developer</p>
+                    <p class="text-slate-400 italic">"Turning data into intelligent, real-world solutions."</p>
+                </div>
+                <div class="flex gap-4 pt-4">
+                    <a href="https://github.com/DeadBoTt-exe" target="_blank" class="p-3 bg-slate-800/50 rounded-full hover:text-blue-400 transition border border-white/10" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                    <a href="https://linkedin.com/in/bhaskar-chari" target="_blank" class="p-3 bg-slate-800/50 rounded-full hover:text-blue-400 transition border border-white/10" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <button onclick="toggleModal()" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold transition shadow-lg shadow-blue-900/40">View Resume</button>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-blue-500 blur-3xl opacity-20 group-hover:opacity-40 transition duration-700"></div>
+                    <img src="assets/img/image.jpg" alt="Bhaskar Chari" class="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-3xl border border-white/10 shadow-2xl transition duration-500 group-hover:scale-[1.02]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutme" class="py-24 px-6 bg-slate-900/20">
+        <div class="container mx-auto max-w-4xl flex flex-col items-center">
+            <h2 class="text-3xl font-bold mb-12 text-center uppercase tracking-widest">About Me</h2>
+            <div class="glass-card p-8 md:p-12 rounded-3xl border-t-4 border-blue-500">
+                <p class="text-lg md:text-xl text-slate-200 leading-relaxed mb-8 text-justify">
+                    I'm a <span class="text-blue-400 font-semibold">Computer Science student</span> from Vellore Institute of Technology (2022-2026) with a strong focus on Artificial Intelligence and Machine Learning, actively building intelligent systems and data-driven applications. With hands-on experience in <span class="text-white">Python, TensorFlow</span>, and core ML techniques, I work across areas such as Neural Networks, Computer Vision, NLP, and Data Analysis.
+                </p>
+                <p class="text-lg md:text-xl text-slate-200 leading-relaxed text-justify">
+                    I enjoy working on research-oriented and real-world projects, from crop yield prediction and sentiment analysis to AI-based pose and dance-form detection. As a lead member of the <span class="text-blue-400 font-medium">Vitronix Club</span>, I collaborate on technical initiatives and participate in hackathons to apply my skills in real-world settings. I'm enthusiastic about exploring diverse projects, thrive in collaborative environments, and enjoy turning complex problems into practical, scalable solutions.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 mt-10">
+                <div class="flex items-center gap-2 px-5 py-3 bg-slate-800/50 rounded-xl border border-white/5 transition hover:border-blue-500/30">
+                    <i class="fas fa-graduation-cap text-blue-500"></i><span class="text-xs uppercase tracking-wider font-bold">CS Student</span>
+                </div>
+                <div class="flex items-center gap-2 px-5 py-3 bg-slate-800/50 rounded-xl border border-white/5 transition hover:border-blue-500/30">
+                    <i class="fas fa-microscope text-blue-500"></i><span class="text-xs uppercase tracking-wider font-bold">Research Focused</span>
+                </div>
+                <div class="flex items-center gap-2 px-5 py-3 bg-slate-800/50 rounded-xl border border-white/5 transition hover:border-blue-500/30">
+                    <i class="fas fa-users text-blue-500"></i><span class="text-xs uppercase tracking-wider font-bold">Collaborative</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-left uppercase tracking-widest"><span class="section-dot"></span>Technical Armory</h2>
+            <div class="flex flex-col gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="glass-card p-5 rounded-2xl border-t-2 border-blue-500/50 flex flex-col items-start">
+                        <h4 class="text-blue-400 font-bold uppercase text-[10px] tracking-widest mb-4 flex items-center gap-2"><i class="fas fa-code"></i> Languages</h4>
+                        <div class="flex flex-wrap gap-2"><span class="skill-chip">Python</span><span class="skill-chip">C++</span><span class="skill-chip">Java</span></div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl border-t-2 border-cyan-500/50 flex flex-col items-start">
+                        <h4 class="text-cyan-400 font-bold uppercase text-[10px] tracking-widest mb-4 flex items-center gap-2"><i class="fas fa-tools"></i> Tools</h4>
+                        <div class="flex flex-wrap gap-2"><span class="skill-chip">Git</span><span class="skill-chip">GitHub</span><span class="skill-chip">MySQL</span><span class="skill-chip">Jupyter</span><span class="skill-chip">PowerBI</span></div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl border-t-2 border-indigo-500/50 flex flex-col items-start">
+                        <h4 class="text-indigo-400 font-bold uppercase text-[10px] tracking-widest mb-4 flex items-center gap-2"><i class="fas fa-language"></i> Spoken Languages</h4>
+                        <div class="flex flex-wrap gap-2"><span class="skill-chip !text-indigo-300 !bg-indigo-500/10">English</span><span class="skill-chip !text-indigo-300 !bg-indigo-500/10">Hindi</span><span class="skill-chip !text-indigo-300 !bg-indigo-500/10">Telugu</span><span class="skill-chip !text-indigo-300 !bg-indigo-500/10">Marathi</span></div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="glass-card p-6 rounded-2xl border-l-2 border-blue-500/50">
+                        <h4 class="text-blue-400 font-bold uppercase text-[10px] tracking-widest mb-5 flex items-center gap-2"><i class="fas fa-cubes"></i> Libraries & Frameworks</h4>
+                        <div class="flex flex-wrap gap-2"><span class="skill-chip">TensorFlow</span><span class="skill-chip">PyTorch</span><span class="skill-chip">Scikit-learn</span><span class="skill-chip">Pandas</span><span class="skill-chip">NumPy</span><span class="skill-chip">Matplotlib</span><span class="skill-chip">MediaPipe</span><span class="skill-chip">PyQt5</span><span class="skill-chip">CatBoost</span></div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl border-l-2 border-cyan-500/50">
+                        <h4 class="text-cyan-400 font-bold uppercase text-[10px] tracking-widest mb-5 flex items-center gap-2"><i class="fas fa-microchip"></i> Core Concepts</h4>
+                        <div class="flex flex-wrap gap-2"><span class="skill-chip">Machine Learning</span><span class="skill-chip">Neural Networks</span><span class="skill-chip">NLP</span><span class="skill-chip">Computer Vision</span><span class="skill-chip">Prompt Engineering</span><span class="skill-chip">GenAI</span><span class="skill-chip">OOP</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 bg-slate-900/40">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-left uppercase tracking-widest">Project Warehouse</h2>
+            <p class="text-slate-500 mb-12 text-sm uppercase tracking-widest">Click the Desired card for more details</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="project-card-container" onclick="flipCard(this)">
+                    <div class="project-card-inner">
+                        <div class="card-front glass-card p-8 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-6">
+                                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Computer Vision / ANN</span>
+                                    <a href="https://github.com/DeadBoTt-exe/TarangAI.git" target="_blank" onclick="event.stopPropagation()" class="hover:text-blue-400"><i class="fab fa-github text-xl"></i></a>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4">TarangAI</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed text-justify">AI-powered system for identifying Indian classical dance forms. Uses pose estimation and movement analysis to study patterns, demonstrating ML in human motion and cultural art analysis.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2"><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">MediaPipe</span><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">OpenCV</span></div>
+                        </div>
+                        <div class="card-back p-8 flex flex-col justify-center border-blue-500/50">
+                            <h4 class="text-blue-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-microchip mr-2"></i>What I worked on</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Extracted skeletal keypoints using MediaPipe.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Developed custom classifiers for dance patterns.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Optimized vision pipelines for real-time inference.</span></li>
+                            </ul>
+                            <h4 class="text-blue-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-lightbulb mr-2"></i>Why it Matters</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Digitized cultural art analysis via Computer Vision.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Improved understanding of complex human motion.</span></li>
+                            </ul>
+                            <span class="text-[10px] text-blue-500 font-bold uppercase tracking-widest italic animate-pulse text-center">Click to flip back</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-container" onclick="flipCard(this)">
+                    <div class="project-card-inner">
+                        <div class="card-front glass-card p-8 border-t-2 border-emerald-500/30 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-6">
+                                    <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">ANN / Data Analysis</span>
+                                    <a href="https://github.com/DeadBoTt-exe/Crop-Yield-Prediction-using-ANN.git" target="_blank" onclick="event.stopPropagation()" class="hover:text-blue-400"><i class="fab fa-github text-xl"></i></a>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4">Crop Prediction</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed text-justify">A machine learning project that uses ANN to predict agricultural crop yields. It analyzes historical and environmental data to identify patterns affecting production.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2"><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">TensorFlow</span><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Keras</span></div>
+                        </div>
+                        <div class="card-back p-8 flex flex-col justify-center border-emerald-500/50">
+                            <h4 class="text-emerald-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-microchip mr-2"></i>What I worked on</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Preprocessed and analyzed agricultural datasets.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Designed and trained ANN models for yield prediction.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Evaluated model performance and optimized predictions.</span></li>
+                            </ul>
+                            <h4 class="text-emerald-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-lightbulb mr-2"></i>Why it matters</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Supports data-driven agricultural decision-making.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Helps improve yield forecasting and planning.</span></li>
+                            </ul>
+                            <span class="text-[10px] text-emerald-500 font-bold uppercase tracking-widest italic animate-pulse text-center">Click to flip back</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-container" onclick="flipCard(this)">
+                    <div class="project-card-inner">
+                        <div class="card-front glass-card p-8 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-6">
+                                    <span class="text-[10px] font-bold text-purple-400 uppercase tracking-widest">NLP / Text Analysis</span>
+                                    <a href="https://github.com/DeadBoTt-exe/SentimentR.git" target="_blank" onclick="event.stopPropagation()" class="hover:text-blue-400"><i class="fab fa-github text-xl"></i></a>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4">SentimentR</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed text-justify">A machine learning project for analyzing and classifying text sentiment polarity using NLP techniques, demonstrating practical applications in opinion mining.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2"><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Scikit-learn</span><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">NLTK</span></div>
+                        </div>
+                        <div class="card-back p-8 flex flex-col justify-center border-purple-500/50">
+                            <h4 class="text-purple-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-microchip mr-2"></i>What I worked on</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Preprocessed and cleaned raw textual data.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Extracted features for sentiment representation.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Trained and evaluated sentiment classification models.</span></li>
+                            </ul>
+                            <h4 class="text-purple-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-lightbulb mr-2"></i>Why it matters</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Automates sentiment analysis from textual data.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Enables insights from user opinions and feedback.</span></li>
+                            </ul>
+                            <span class="text-[10px] text-purple-500 font-bold uppercase tracking-widest italic animate-pulse text-center">Click to flip back</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-container" onclick="flipCard(this)">
+                    <div class="project-card-inner">
+                        <div class="card-front glass-card p-8 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-6">
+                                    <span class="text-[10px] font-bold text-yellow-400 uppercase tracking-widest">Financial ML / Time Series</span>
+                                    <a href="https://github.com/DeadBoTt-exe/STOCK-MARKET-ANALYSIS-Using-Machine-learning.git" target="_blank" onclick="event.stopPropagation()" class="hover:text-blue-400 transition"><i class="fab fa-github text-xl"></i></a>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4">MarketPulse AI</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed text-justify">Predicting stock market trends by processing historical financial data to identify patterns and price movements using quantitative time-series models.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2"><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Scikit-Learn</span><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Pandas</span></div>
+                        </div>
+                        <div class="card-back p-8 flex flex-col justify-center border-yellow-500/50">
+                            <h4 class="text-yellow-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-microchip mr-2"></i>What I worked on</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Collected and cleaned historical stock market data.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Engineered features from financial time-series signals.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Integrated Matplotlib for real-time trend visualization.</span></li>
+                            </ul>
+                            <h4 class="text-yellow-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-lightbulb mr-2"></i>Why it matters</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Enables data-driven analysis of financial assets.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Demonstrates applied ML in quantitative finance.</span></li>
+                            </ul>
+                            <span class="text-[10px] text-yellow-500 font-bold uppercase tracking-widest italic animate-pulse text-center">Click to flip back</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-container" onclick="flipCard(this)">
+                    <div class="project-card-inner">
+                        <div class="card-front glass-card p-8 border-t-2 border-red-500/30 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-6">
+                                    <span class="text-[10px] font-bold text-red-400 uppercase tracking-widest">NLP / Recommendation</span>
+                                    <a href="https://github.com/DeadBoTt-exe/Spoofify.git" target="_blank" onclick="event.stopPropagation()" class="hover:text-blue-400 transition"><i class="fab fa-github text-xl"></i></a>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4">Spoofify</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed text-justify">A lyric-based recommendation system using TF-IDF and cosine similarity to suggest tracks based on emotional and sentiment detection within song content.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2"><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Scikit-learn</span><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">NLTK</span></div>
+                        </div>
+                        <div class="card-back p-8 flex flex-col justify-center border-red-500/50">
+                            <h4 class="text-red-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-microchip mr-2"></i>What i worked on</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Vectorized lyrics using TF-IDF text representation.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Computed cosine similarity for track mapping.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Performed emotion analysis on lyrical datasets.</span></li>
+                            </ul>
+                            <h4 class="text-red-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-lightbulb mr-2"></i>Why it matters</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Personalized recommendations based on lyrical depth.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Applies NLP and similarity metrics in music analytics.</span></li>
+                            </ul>
+                            <span class="text-[10px] text-red-500 font-bold uppercase tracking-widest italic animate-pulse text-center">Click to flip back</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-container" onclick="flipCard(this)">
+                    <div class="project-card-inner">
+                        <div class="card-front glass-card p-8 border-t-2 border-blue-500/30 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-6">
+                                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Open for Collaboration</span>
+                                    <i class="fas fa-handshake text-blue-500 text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4">Let’s Build Something</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed text-justify">Open to collaborating on machine learning and AI projects. Interested in real-world problems, research ideas, and innovative applications. Always excited to learn, build, and grow together.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2"><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">AIML</span><span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Collaboration</span></div>
+                        </div>
+                        <div class="card-back p-8 flex flex-col justify-center border-blue-500/50">
+                            <h4 class="text-blue-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-project-diagram mr-2"></i>What we can build</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>End-to-end Machine Learning pipelines.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Computer Vision & Image Processing tools.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Custom Neural Network architectures.</span></li>
+                            </ul>
+                            <h4 class="text-blue-400 font-bold mb-3 uppercase text-[10px] tracking-widest"><i class="fas fa-users mr-2"></i>Preferred Areas</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 mb-6 border-l border-slate-700 pl-4">
+                                <li class="flex gap-2"><span>•</span><span>Research-oriented AI applications.</span></li>
+                                <li class="flex gap-2"><span>•</span><span>Scalable data-driven solutions.</span></li>
+                            </ul>
+                            <span class="text-[10px] text-blue-500 font-bold uppercase tracking-widest italic animate-pulse text-center">Click to flip back</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="py-24 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-8 items-stretch">
+
+                <div class="flex flex-col">
+                    <h2 class="text-3xl font-bold mb-8 uppercase tracking-widest text-left">ACHIEVEMENTS</h2>
+                    <div class="glass-card p-8 rounded-3xl border-l-4 border-yellow-500 hover:border-yellow-400 transition-all flex-grow">
+                        <h4 class="font-bold text-white uppercase tracking-wide text-sm mb-6 flex items-center gap-2"><i class="fas fa-certificate text-yellow-500"></i> CERTIFICATIONS & CREDENTIALS</h4>
+                        <ul class="text-sm text-slate-400 space-y-6">
+                            <li class="flex gap-3">
+                                <span class="text-yellow-500">•</span>
+                                <div>
+                                    <span class="text-slate-200 font-semibold block uppercase text-xs">Prompt Design in Vertex AI — Google</span>
+                                    <span class="text-xs">Hands-on experience with prompt engineering and AI workflows.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-yellow-500">•</span>
+                                <div>
+                                    <span class="text-slate-200 font-semibold block uppercase text-xs">Artificial Intelligence Job Simulation — Cognizant</span>
+                                    <span class="text-xs">Applied AI concepts to real-world business scenarios.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-yellow-500">•</span>
+                                <div>
+                                    <span class="text-slate-200 font-semibold block uppercase text-xs">AI for India 2.0 — HCL GUVI</span>
+                                    <span class="text-xs">Foundational training in artificial intelligence and ML concepts.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-yellow-500">•</span>
+                                <div>
+                                    <span class="text-slate-200 font-semibold block uppercase text-xs">Machine Learning & Self-Driving Cars — Udemy</span>
+                                    <span class="text-xs">Applied ML and computer vision techniques to real-world problems.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-yellow-500">•</span>
+                                <div>
+                                    <span class="text-slate-200 font-semibold block uppercase text-xs">Cyber Security Analyst — IBM</span>
+                                    <span class="text-xs">Exposure to security analytics and data-driven threat assessment.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <h2 class="text-3xl font-bold mb-8 uppercase tracking-widest text-left">BEYOND THE CLASSROOM</h2>
+                    <div class="glass-card p-8 rounded-3xl border-l-4 border-blue-500 hover:border-blue-400 transition-all flex-grow">
+                        <h4 class="font-bold text-white uppercase tracking-wide text-sm mb-6 flex items-center gap-2"><i class="fas fa-users text-blue-500"></i> LEADERSHIP & COLLABORATION</h4>
+                        <ul class="text-sm text-slate-400 space-y-6">
+                            <li class="flex gap-3">
+                                <span class="text-blue-500">•</span>
+                                <div>
+                                    <span class="text-slate-200 font-semibold block uppercase text-xs">VITRONIX CLUB - LEAD ROLE</span>
+                                    <span class="text-xs text-justify block">Led and coordinated teams to successfully plan and execute multiple technical and non-technical events across the college. Managed responsibilities across teams, ensured smooth collaboration, and guided peers to deliver impactful outcomes under tight timelines.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-blue-500">•</span>
+                                <div>
+                                    <span class="text-slate-200 font-semibold block uppercase text-xs">HEALTH HACKATHON — NATIONAL FINALIST</span>
+                                    <span class="text-xs text-justify block">Collaborated closely with a team of peers during a national-level health hackathon, contributing to ideation, problem-solving, and implementation. Worked effectively as a team to reach the national finalist stage, demonstrating strong teamwork and execution.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-blue-500">•</span>
+                                <div>
+                                    <span class="text-slate-200 font-semibold block uppercase text-xs">SMART INDIA HACKATHON (SIH) — PROBLEM STATEMENT EXPLORATION</span>
+                                    <span class="text-xs text-justify block">Worked collaboratively on an SIH problem statement, contributing to ideation, solution design, and prototype development in a hackathon-style environment.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 border-t border-white/5">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-4xl font-bold mb-6 text-white">Let's Connect</h2>
+            <p class="text-slate-400 mb-10 text-lg max-w-2xl mx-auto">Always open to new opportunities, collaborative projects, or simply geeking out over machine learning.</p>
+            <div class="flex flex-col items-center justify-center gap-4 mb-12 text-slate-300 font-medium text-lg">
+                <a href="mailto:charibhaskar2608@gmail.com" class="flex items-center gap-3 hover:text-blue-400 transition-colors group">
+                    <i class="fas fa-envelope text-blue-500"></i><span>charibhaskar2608@gmail.com</span>
+                </a>
+                <div class="flex items-center gap-3"><i class="fas fa-phone text-blue-500"></i><span>+91 9010583888</span></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-xl mx-auto">
+                <a href="https://linkedin.com/in/bhaskar-chari" target="_blank" class="glass-card flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold hover:bg-blue-800 hover:text-white transition-all">
+                    <i class="fab fa-linkedin text-blue-500 group-hover:text-white"></i> LinkedIn
+                </a>
+                <a href="https://github.com/DeadBoTt-exe" target="_blank" class="glass-card flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold hover:bg-slate-700 hover:text-white transition-all">
+                    <i class="fab fa-github text-blue-500 group-hover:text-white"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-white/5 bg-slate-950/50">
+        <div class="container mx-auto px-6">
+            <p class="text-slate-500 text-xs tracking-widest uppercase mb-2">Thanks for dropping by!</p>
+            <p class="text-slate-600 text-[10px] uppercase tracking-widest">&copy; 2025 Bhaskar Chari. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="resumeModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md p-4">
+        <div class="glass-card w-full max-w-5xl h-[90vh] rounded-3xl overflow-hidden flex flex-col border border-white/20">
+            <div class="p-5 border-b border-white/10 flex justify-between items-center bg-slate-900">
+                <h3 class="font-bold text-xl">Curriculum Vitae</h3>
+                <button onclick="toggleModal()" class="text-slate-400 hover:text-red-500 text-3xl transition">&times;</button>
+            </div>
+            <iframe src="resume.pdf" class="flex-grow bg-white"></iframe>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
