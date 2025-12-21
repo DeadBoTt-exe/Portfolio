@@ -60,7 +60,7 @@ body {
         border-color: rgba(59, 130, 246, 0.5);
         background: rgba(30, 41, 59, 0.98);
         box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
-        transform: translateY(-5px); /* Adds a slight lift alongside the flip capability */
+        transform: translateY(-5px); 
     }
 
         /* Make the specific "open-link" icon glow on hover */
@@ -94,7 +94,7 @@ body {
     border-radius: 1.5rem;
     overflow: hidden;
     background-color: var(--card-bg);
-    transition: all 0.4s ease; /* Ensures smooth glow transitions */
+    transition: all 0.4s ease; 
 }
 
 .card-front {
