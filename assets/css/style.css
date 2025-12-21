@@ -60,13 +60,24 @@ body {
         border-color: rgba(59, 130, 246, 0.5);
         background: rgba(30, 41, 59, 0.98);
         box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
-        transform: translateY(-5px); 
+        transform: translateY(-5px);
     }
 
-        /* Make the specific "open-link" icon glow on hover */
-        .project-card-container:hover .card-front i.fa-external-link-alt {
-            filter: drop-shadow(0 0 8px currentColor);
-        }
+    /* --- REDIRECT CARD SPECIFIC --- */
+    /* Disables the 3D flip for the GitHub redirect card */
+    .project-card-container.redirect-card:hover .project-card-inner {
+        transform: none !important;
+    }
+
+.redirect-card .project-card-inner {
+    cursor: pointer;
+}
+
+/* Make the specific "open-link" icon glow on hover */
+.project-card-container:hover .card-front i.fa-external-link-alt,
+.project-card-container:hover .card-front i.fa-arrow-right {
+    filter: drop-shadow(0 0 8px currentColor);
+}
 
 .project-card-inner {
     position: absolute;
@@ -94,7 +105,7 @@ body {
     border-radius: 1.5rem;
     overflow: hidden;
     background-color: var(--card-bg);
-    transition: all 0.4s ease; 
+    transition: all 0.4s ease;
 }
 
 .card-front {

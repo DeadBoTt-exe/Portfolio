@@ -1,3 +1,4 @@
+// --- Neural Background Logic ---
 const canvas = document.getElementById('neural-canvas');
 const ctx = canvas.getContext('2d');
 let particles = [];
@@ -47,42 +48,52 @@ function draw() {
     requestAnimationFrame(draw);
 }
 
-
 window.addEventListener('resize', init);
 init();
 draw();
 
-
+// --- Modal Logic ---
 function toggleModal() {
-    document.getElementById('resumeModal').classList.toggle('hidden');
-    document.body.classList.toggle('overflow-hidden');
+    const modal = document.getElementById('resumeModal');
+    if (modal) {
+        modal.classList.toggle('hidden');
+        document.body.classList.toggle('overflow-hidden');
+    }
 }
-
 
 window.onclick = function (event) {
     const modal = document.getElementById('resumeModal');
     if (event.target == modal) toggleModal();
 }
 
-
+// --- Project Card Logic ---
 function flipCard(container) {
+    // Check if this card is meant for redirecting to GitHub
+    // If it is, we DON'T want it to flip.
+    if (container.classList.contains('redirect-card')) {
+        return;
+    }
+
     const inner = container.querySelector('.project-card-inner');
-    inner.classList.toggle('is-flipped');
+    if (inner) {
+        inner.classList.toggle('is-flipped');
+    }
 }
 
-
+// --- Typing Animation Logic ---
 const quoteText = "Turning data into intelligent, real-world solutions.";
 const typingTarget = document.getElementById("typing-quote");
 let typingIndex = 0;
 
 function typeEffect() {
-    if (typingIndex < quoteText.length) {
+    if (typingTarget && typingIndex < quoteText.length) {
         typingTarget.textContent += quoteText.charAt(typingIndex);
         typingIndex++;
-        setTimeout(typeEffect, 50); 
+        setTimeout(typeEffect, 50);
     }
 }
 
+// Trigger animation after 1 second delay
 window.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeEffect, 1000);
 });
