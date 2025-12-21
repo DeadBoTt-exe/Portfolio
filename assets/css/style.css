@@ -21,21 +21,15 @@ body {
     pointer-events: none;
 }
 
-/* Base Glass Card Styling */
+/* --- Base Glass Card Styling --- */
 .glass-card {
-    background: rgba(15, 23, 42, 0.95); 
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-    .glass-card:hover {
-        border-color: rgba(59, 130, 246, 0.5);
-        transform: translateY(-5px);
-        background: rgba(30, 41, 59, 0.95);
-    }
-
-/* Skills Tags */
+/* --- Global Skills Tags --- */
 .skill-chip {
     background: rgba(59, 130, 246, 0.1);
     border: 1px solid rgba(59, 130, 246, 0.2);
@@ -53,13 +47,26 @@ body {
         transform: scale(1.05);
     }
 
-/* 3D FLIP CARD LOGIC - STABILIZED */
+/* --- 3D FLIP CARD LOGIC (Stabilized & Hover Effects) --- */
 .project-card-container {
     perspective: 1500px;
-    height: 400px; 
+    height: 400px;
     width: 100%;
     position: relative;
 }
+
+    /* Trigger the glow/lift on the front face when the container is hovered */
+    .project-card-container:hover .card-front {
+        border-color: rgba(59, 130, 246, 0.5);
+        background: rgba(30, 41, 59, 0.98);
+        box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+        transform: translateY(-5px); /* Adds a slight lift alongside the flip capability */
+    }
+
+        /* Make the specific "open-link" icon glow on hover */
+        .project-card-container:hover .card-front i.fa-external-link-alt {
+            filter: drop-shadow(0 0 8px currentColor);
+        }
 
 .project-card-inner {
     position: absolute;
@@ -78,16 +85,16 @@ body {
 
 .card-front, .card-back {
     position: absolute;
-    top: 0; 
-    left: 0; 
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 1.5rem;
     overflow: hidden;
-  
     background-color: var(--card-bg);
+    transition: all 0.4s ease; /* Ensures smooth glow transitions */
 }
 
 .card-front {
@@ -102,25 +109,7 @@ body {
     z-index: 1;
 }
 
-/* SCROLLBAR */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #0f172a;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #334155;
-    border-radius: 10px;
-}
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: var(--accent-blue);
-    }
-
-/* TYPING ANIMATION CURSOR */
+/* --- TYPING ANIMATION --- */
 #typing-quote::after {
     content: '|';
     animation: blink 1s infinite;
@@ -138,6 +127,24 @@ body {
         opacity: 0;
     }
 }
+
+/* --- UI ELEMENTS --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--accent-blue);
+    }
 
 .section-header-group {
     margin-bottom: 3rem;
