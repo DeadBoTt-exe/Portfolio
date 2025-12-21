@@ -18,7 +18,7 @@
 
     <nav class="fixed w-full z-50 glass-card py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tighter uppercase">BC<span class="text-blue-500">.</span>AI</span>
+            <span class="text-xl font-bold tracking-tighter uppercase">Bhaskar<span class="text-blue-500">_</span>Chari</span>
             <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
                 <a href="#home" class="hover:text-blue-400 transition">Home</a>
                 <a href="#aboutme" class="hover:text-blue-400 transition">About</a>
@@ -30,7 +30,7 @@
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex items-center pt-24 px-6">
+    <section id="home" class="relative min-h-screen flex items-center pt-24 px-6">
         <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
                 <div class="leading-none">
@@ -38,22 +38,32 @@
                     <h2 class="text-blue-400 font-semibold tracking-widest uppercase text-sm">I'm</h2>
                 </div>
                 <h1 class="text-5xl md:text-7xl font-bold leading-tight">Bhaskar <span class="text-blue-500">Chari</span></h1>
+
                 <div class="border-l-4 border-blue-600 pl-6 space-y-2">
                     <p class="text-xl font-semibold text-slate-300">AI & Machine Learning Developer</p>
-                    <p class="text-slate-400 italic">"Turning data into intelligent, real-world solutions."</p>
+                    <p class="text-slate-400 italic min-h-[1.5rem]">
+                        "<span id="typing-quote"></span>"
+                    </p>
                 </div>
+
                 <div class="flex gap-4 pt-4">
                     <a href="https://github.com/DeadBoTt-exe" target="_blank" class="p-3 bg-slate-800/50 rounded-full hover:text-blue-400 transition border border-white/10" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
                     <a href="https://linkedin.com/in/bhaskar-chari" target="_blank" class="p-3 bg-slate-800/50 rounded-full hover:text-blue-400 transition border border-white/10" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
                     <button onclick="toggleModal()" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold transition shadow-lg shadow-blue-900/40">View Resume</button>
                 </div>
             </div>
+
             <div class="flex justify-center">
                 <div class="relative group">
                     <div class="absolute inset-0 bg-blue-500 blur-3xl opacity-20 group-hover:opacity-40 transition duration-700"></div>
                     <img src="assets/img/image.jpg" alt="Bhaskar Chari" class="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-3xl border border-white/10 shadow-2xl transition duration-500 group-hover:scale-[1.02]">
                 </div>
             </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce pointer-events-none">
+            <span class="text-[10px] uppercase tracking-[0.3em] text-blue-400">Scroll</span>
+            <i class="fas fa-chevron-down text-blue-500"></i>
         </div>
     </section>
 
@@ -62,29 +72,35 @@
             <h2 class="text-3xl font-bold mb-12 text-center uppercase tracking-widest">About Me</h2>
             <div class="glass-card p-8 md:p-12 rounded-3xl border-t-4 border-blue-500">
                 <p class="text-lg md:text-xl text-slate-200 leading-relaxed mb-8 text-justify">
-                    I'm a <span class="text-blue-400 font-semibold">Computer Science student</span> from Vellore Institute of Technology (2022-2026) with a strong focus on Artificial Intelligence and Machine Learning, actively building intelligent systems and data-driven applications. With hands-on experience in <span class="text-white">Python, TensorFlow</span>, and core ML techniques, I work across areas such as Neural Networks, Computer Vision, NLP, and Data Analysis.
+                    I'm a <span class="text-blue-400 font-semibold">Computer Science student</span> with a strong focus on Artificial Intelligence and Machine Learning, actively building intelligent systems and data-driven applications. With hands-on experience in <span class="text-white">Python, TensorFlow</span>, and core ML techniques, I work across areas such as Neural Networks, Computer Vision, NLP, and Data Analysis.
                 </p>
                 <p class="text-lg md:text-xl text-slate-200 leading-relaxed text-justify">
                     I enjoy working on research-oriented and real-world projects, from crop yield prediction and sentiment analysis to AI-based pose and dance-form detection. As a lead member of the <span class="text-blue-400 font-medium">Vitronix Club</span>, I collaborate on technical initiatives and participate in hackathons to apply my skills in real-world settings. I'm enthusiastic about exploring diverse projects, thrive in collaborative environments, and enjoy turning complex problems into practical, scalable solutions.
                 </p>
             </div>
             <div class="flex flex-wrap justify-center gap-4 mt-10">
-                <div class="flex items-center gap-2 px-5 py-3 bg-slate-800/50 rounded-xl border border-white/5 transition hover:border-blue-500/30">
-                    <i class="fas fa-graduation-cap text-blue-500"></i><span class="text-xs uppercase tracking-wider font-bold">CS Student</span>
+                <div class="flex items-center justify-center gap-3 px-6 py-3 min-w-[200px] bg-slate-800/50 rounded-xl border border-white/5 transition-all duration-300 hover:border-blue-500/40 hover:bg-slate-800">
+                    <i class="fas fa-graduation-cap text-blue-500 text-sm"></i>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-slate-300">CS Student @ VIT</span>
                 </div>
-                <div class="flex items-center gap-2 px-5 py-3 bg-slate-800/50 rounded-xl border border-white/5 transition hover:border-blue-500/30">
-                    <i class="fas fa-microscope text-blue-500"></i><span class="text-xs uppercase tracking-wider font-bold">Research Focused</span>
+
+                <div class="flex items-center justify-center gap-3 px-6 py-3 min-w-[200px] bg-slate-800/50 rounded-xl border border-white/5 transition-all duration-300 hover:border-blue-500/40 hover:bg-slate-800">
+                    <i class="fas fa-microscope text-blue-500 text-sm"></i>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-slate-300">Research Focused</span>
                 </div>
-                <div class="flex items-center gap-2 px-5 py-3 bg-slate-800/50 rounded-xl border border-white/5 transition hover:border-blue-500/30">
-                    <i class="fas fa-users text-blue-500"></i><span class="text-xs uppercase tracking-wider font-bold">Collaborative</span>
+
+                <div class="flex items-center justify-center gap-3 px-6 py-3 min-w-[200px] bg-slate-800/50 rounded-xl border border-white/5 transition-all duration-300 hover:border-blue-500/40 hover:bg-slate-800">
+                    <i class="fas fa-users text-blue-500 text-sm"></i>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-slate-300">Collaborative</span>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
     <section id="skills" class="py-24 px-6">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-left uppercase tracking-widest"><span class="section-dot"></span>Technical Armory</h2>
+            <h2 class="text-3xl font-bold mb-12 text-left uppercase tracking-widest">Technical Armory</h2>
             <div class="flex flex-col gap-4">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div class="glass-card p-5 rounded-2xl border-t-2 border-blue-500/50 flex flex-col items-start">
@@ -116,8 +132,14 @@
 
     <section id="projects" class="py-24 px-6 bg-slate-900/40">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-left uppercase tracking-widest">Project Warehouse</h2>
-            <p class="text-slate-500 mb-12 text-sm uppercase tracking-widest">Click the Desired card for more details</p>
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-2 text-left uppercase tracking-widest">
+                    Project Warehouse
+                </h2>
+                <p class="text-slate-500 text-xs uppercase tracking-widest opacity-80">
+                    Click the desired card to reveal more details
+                </p>
+            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div class="project-card-container" onclick="flipCard(this)">
@@ -309,7 +331,7 @@
             <div class="grid md:grid-cols-2 gap-8 items-stretch">
 
                 <div class="flex flex-col">
-                    <h2 class="text-3xl font-bold mb-8 uppercase tracking-widest text-left">ACHIEVEMENTS</h2>
+                    <h2 class="text-3xl font-bold mb-8 uppercase tracking-widest text-center">ACHIEVEMENTS</h2>
                     <div class="glass-card p-8 rounded-3xl border-l-4 border-yellow-500 hover:border-yellow-400 transition-all flex-grow">
                         <h4 class="font-bold text-white uppercase tracking-wide text-sm mb-6 flex items-center gap-2"><i class="fas fa-certificate text-yellow-500"></i> CERTIFICATIONS & CREDENTIALS</h4>
                         <ul class="text-sm text-slate-400 space-y-6">
@@ -353,7 +375,7 @@
                 </div>
 
                 <div class="flex flex-col">
-                    <h2 class="text-3xl font-bold mb-8 uppercase tracking-widest text-left">BEYOND THE CLASSROOM</h2>
+                    <h2 class="text-3xl font-bold mb-8 uppercase tracking-widest text-center">BEYOND THE CLASSROOM</h2>
                     <div class="glass-card p-8 rounded-3xl border-l-4 border-blue-500 hover:border-blue-400 transition-all flex-grow">
                         <h4 class="font-bold text-white uppercase tracking-wide text-sm mb-6 flex items-center gap-2"><i class="fas fa-users text-blue-500"></i> LEADERSHIP & COLLABORATION</h4>
                         <ul class="text-sm text-slate-400 space-y-6">
@@ -387,21 +409,40 @@
     </section>
 
     <section id="contact" class="py-24 px-6 border-t border-white/5">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-4xl font-bold mb-6 text-white">Let's Connect</h2>
-            <p class="text-slate-400 mb-10 text-lg max-w-2xl mx-auto">Always open to new opportunities, collaborative projects, or simply geeking out over machine learning.</p>
+        <div class="container mx-auto max-w-5xl text-center">
+            <h2 class="text-4xl font-bold mb-6 text-white uppercase tracking-widest">Let's Connect</h2>
+            <p class="text-slate-400 mb-10 text-lg max-w-2xl mx-auto">
+                Always open to new opportunities, collaborative projects, or simply geeking out over machine learning.
+            </p>
+
             <div class="flex flex-col items-center justify-center gap-4 mb-12 text-slate-300 font-medium text-lg">
                 <a href="mailto:charibhaskar2608@gmail.com" class="flex items-center gap-3 hover:text-blue-400 transition-colors group">
-                    <i class="fas fa-envelope text-blue-500"></i><span>charibhaskar2608@gmail.com</span>
+                    <i class="fas fa-envelope text-blue-500"></i>
+                    <span>charibhaskar2608@gmail.com</span>
                 </a>
-                <div class="flex items-center gap-3"><i class="fas fa-phone text-blue-500"></i><span>+91 9010583888</span></div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-phone text-blue-500"></i>
+                    <span>+91 9010583888</span>
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-xl mx-auto">
-                <a href="https://linkedin.com/in/bhaskar-chari" target="_blank" class="glass-card flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold hover:bg-blue-800 hover:text-white transition-all">
-                    <i class="fab fa-linkedin text-blue-500 group-hover:text-white"></i> LinkedIn
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <a href="https://linkedin.com/in/bhaskar-chari" target="_blank"
+                   class="glass-card flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold hover:bg-blue-800 hover:text-white transition-all group">
+                    <i class="fab fa-linkedin text-blue-500 group-hover:text-white transition-colors"></i>
+                    LinkedIn
                 </a>
-                <a href="https://github.com/DeadBoTt-exe" target="_blank" class="glass-card flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold hover:bg-slate-700 hover:text-white transition-all">
-                    <i class="fab fa-github text-blue-500 group-hover:text-white"></i> GitHub
+
+                <a href="https://github.com/DeadBoTt-exe" target="_blank"
+                   class="glass-card flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold hover:bg-slate-700 hover:text-white transition-all group">
+                    <i class="fab fa-github text-blue-500 group-hover:text-white transition-colors"></i>
+                    GitHub
+                </a>
+
+                <a href="resume.pdf" download="Bhaskar_Chari_Resume.pdf"
+                   class="glass-card flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold hover:bg-blue-600 hover:text-white transition-all group">
+                    <i class="fas fa-download text-blue-500 group-hover:text-white transition-colors"></i>
+                    Resume
                 </a>
             </div>
         </div>

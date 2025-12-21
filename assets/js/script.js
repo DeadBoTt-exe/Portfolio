@@ -69,3 +69,20 @@ function flipCard(container) {
     const inner = container.querySelector('.project-card-inner');
     inner.classList.toggle('is-flipped');
 }
+
+
+const quoteText = "Turning data into intelligent, real-world solutions.";
+const typingTarget = document.getElementById("typing-quote");
+let typingIndex = 0;
+
+function typeEffect() {
+    if (typingIndex < quoteText.length) {
+        typingTarget.textContent += quoteText.charAt(typingIndex);
+        typingIndex++;
+        setTimeout(typeEffect, 50); 
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(typeEffect, 1000);
+});
