@@ -19,11 +19,10 @@
 <li><a href="#work"><b class="mono">02</b>Work</a></li>
 <li><a href="#research"><b class="mono">03</b>Research</a></li>
 <li><a href="#experience"><b class="mono">04</b>Experience</a></li>
-<li><a href="#achievements"><b class="mono">05</b>Achievements</a></li>
-<li><a href="#education"><b class="mono">06</b>Education</a></li>
-<li><a href="#skills"><b class="mono">07</b>Skills</a></li>
-<li><a href="#about"><b class="mono">08</b>About</a></li>
-<li><a href="#contact"><b class="mono">09</b>Contact</a></li>
+<li><a href="#education"><b class="mono">05</b>Education</a></li>
+<li><a href="#skills"><b class="mono">06</b>Skills</a></li>
+<li><a href="#about"><b class="mono">07</b>About</a></li>
+<li><a href="#contact"><b class="mono">08</b>Contact</a></li>
 </ol></nav>
 <main id="main">
 
@@ -32,7 +31,7 @@
 <div class="hero-grid">
 <div class="hero-text">
 <h1>Bhaskar Chari</h1>
-<p class="role">AI/ML Engineer &amp; Researcher</p>
+<p class="role">AI/ML Engineer</p>
 <p class="lede">I build intelligent systems for real-world problems.</p>
 <p class="focus">Generative AI · RAG · Computer Vision · NLP · Applied Research</p>
 <p class="mono meta">Junior Research Fellow, DRDO R&amp;DE(E) — Aug 2026 to present</p>
@@ -66,15 +65,39 @@
 <ul class="notes">
 <li>Chose RAG over fine-tuning so the knowledge base can change without retraining.</li>
 <li>Pydantic schema validation, async programming, circuit-breaker and observability concepts.</li>
-<li>72 unit tests.</li>
 </ul>
 <a class="ext" href="https://github.com/DeadBoTt-exe/DocuMind-AI" target="_blank" rel="noopener">Source on GitHub ↗</a>
 </div>
 </article>
 
+<article class="rec" id="r3">
+<button class="rh" aria-expanded="false" aria-controls="p3">
+<span class="id mono">02</span>
+<span class="rt"><strong>SentimentR</strong><em>Hybrid sentiment analysis: rule-based heuristics routed to a fine-tuned LLM.</em></span>
+<span class="tg mono">NLP · LLM · Sentiment Analysis</span>
+<span class="ar mono">View project →</span>
+</button>
+<div class="rp" id="p3" hidden>
+<ol class="pipe" aria-label="SentimentR pipeline">
+<li style="--i:0"><span class="mono">Input text</span><small>Review, comment or post</small></li>
+<li style="--i:1"><span class="mono">Rule-based scoring</span><small>Enhanced VADER core</small></li>
+<li style="--i:2"><span class="mono">Confidence check</span><small>Threshold τ = 0.75</small></li>
+<li style="--i:3"><span class="mono">LLM path</span><small>Below threshold: QLoRA fine-tuned LLaMA-2-7b-chat, chain-of-thought</small></li>
+<li style="--i:4"><span class="mono">Output</span><small>Sentiment label with confidence score</small></li>
+</ol>
+<ul class="notes">
+<li>Enhanced VADER core handles explicit sentiment; ambiguous, sarcastic or culturally marked text goes to the LLM path.</li>
+<li>Python SDK, CLI, FastAPI REST API and Streamlit app.</li>
+<li>My part: data gathering, preprocessing and prompt engineering.</li>
+</ul>
+<a class="ext" href="#research">Read the paper ↓</a>
+<a class="ext" href="https://github.com/DeadBoTt-exe/SentimentR" target="_blank" rel="noopener">Source on GitHub ↗</a>
+</div>
+</article>
+
 <article class="rec" id="r2">
 <button class="rh" aria-expanded="false" aria-controls="p2">
-<span class="id mono">02</span>
+<span class="id mono">03</span>
 <span class="rt"><strong>TarangAI</strong><em>Classifies Indian classical dance styles from body pose and hand mudras.</em></span>
 <span class="tg mono">Computer Vision · MediaPipe · Deep Learning</span>
 <span class="ar mono">View project →</span>
@@ -203,34 +226,10 @@
 <li style="--i:5"><span class="mono">Output</span><small>Predicted dance style and mudra</small></li>
 </ol>
 <ul class="notes">
-<li>My part: data gathering, dataset preparation and model training.</li>
+<li>Built with a teammate; the repository is forked into my account. My part: data gathering, dataset preparation and model training.</li>
 <li>Recognizes dance style from body pose together with hand mudras.</li>
 </ul>
 <a class="ext" href="https://github.com/DeadBoTt-exe/TarangAI" target="_blank" rel="noopener">Source on GitHub ↗</a>
-</div>
-</article>
-
-<article class="rec" id="r3">
-<button class="rh" aria-expanded="false" aria-controls="p3">
-<span class="id mono">03</span>
-<span class="rt"><strong>SentimentR</strong><em>Hybrid sentiment analysis: rule-based heuristics routed to a fine-tuned LLM.</em></span>
-<span class="tg mono">NLP · LLM · Sentiment Analysis</span>
-<span class="ar mono">View project →</span>
-</button>
-<div class="rp" id="p3" hidden>
-<ol class="pipe" aria-label="SentimentR pipeline">
-<li style="--i:0"><span class="mono">Input text</span><small>Review, comment or post</small></li>
-<li style="--i:1"><span class="mono">Rule-based scoring</span><small>Enhanced VADER core</small></li>
-<li style="--i:2"><span class="mono">Confidence check</span><small>Threshold τ = 0.75</small></li>
-<li style="--i:3"><span class="mono">LLM path</span><small>Below threshold: QLoRA fine-tuned LLaMA-2-7b-chat, chain-of-thought</small></li>
-<li style="--i:4"><span class="mono">Output</span><small>Sentiment label with confidence score</small></li>
-</ol>
-<ul class="notes">
-<li>Enhanced VADER core handles explicit sentiment; ambiguous, sarcastic or culturally marked text goes to the LLM path.</li>
-<li>Python SDK, CLI, FastAPI REST API and Streamlit app.</li>
-</ul>
-<a class="ext" href="#research">Read the paper ↓</a>
-<a class="ext" href="https://github.com/DeadBoTt-exe/SentimentR" target="_blank" rel="noopener">Source on GitHub ↗</a>
 </div>
 </article>
 </div>
@@ -241,11 +240,12 @@
 <h2>Research</h2>
 <article class="paper">
 <div class="paper-main">
-<p class="mono meta">IEEE publication</p>
-<h3>SentimentR: A Hybrid Enhanced Sentiment Analysis Framework Integrating Rule-Based Heuristics with Large Language Models for Cultural and Sarcastic Context Awareness</h3>
+<p class="mono meta">IEEE CSNT 2026 · Published research</p>
+<h3>Cultural and Sarcastic Context Aware Sentimental Analysis with Large Language Model and Rule Based Heuristics: An Empirical Study</h3>
 <p class="authors">Umair Ullah, Hardik Rawat, Bhaskar Chari, Jay Vivek Yadav, Yuvraj Singh</p>
 <p class="aff">School of Computing Science and Engineering, VIT Bhopal University, Sehore, Madhya Pradesh, India</p>
-<p class="body">A fast rule-based core paired with an LLM wrapper that is used only when the text is ambiguous, sarcastic or culturally marked. Evaluated on IMDb, SARC and Amazon Multilingual Reviews.</p>
+<p class="mono cite">2026 IEEE 15th International Conference on Communication Systems and Network Technologies (CSNT) · Al-Khobar, Saudi Arabia · 7–9 April 2026 · DOI 10.1109/CSNT69054.2026.11502364</p>
+<p class="body">Introduces SentimentR: a fast rule-based core paired with an LLM wrapper used only when text is ambiguous, sarcastic or culturally marked. My part: data gathering, preprocessing and prompt engineering. Evaluated on IMDb, SARC and Amazon Multilingual Reviews.</p>
 <figure class="bars">
 <figcaption class="mono">Accuracy on SARC (sarcasm-heavy)</figcaption>
 <div class="bar"><span class="mono">SentimentR</span><i style="--w:91%"></i><b class="mono">0.91</b></div>
@@ -259,6 +259,19 @@
 <span class="pg"><img src="assets/img/1.png" alt="First page of the SentimentR paper" loading="lazy"></span>
 <span class="pg-cap mono">Page 1 preview · Click to read</span>
 </button>
+<div class="tablewrap"><table class="res">
+<caption class="mono">SARC (sarcasm-heavy)</caption>
+<thead><tr><th>Model</th><th>Acc.</th><th>Prec.</th><th>Recall</th><th>F1</th></tr></thead>
+<tbody>
+<tr><td>VADER</td><td>0.52</td><td>0.55</td><td>0.48</td><td>0.51</td></tr>
+<tr><td>BERT</td><td>0.78</td><td>0.76</td><td>0.79</td><td>0.77</td></tr>
+<tr><td>SentimentR</td><td>0.91</td><td>0.89</td><td>0.92</td><td>0.90</td></tr>
+</tbody></table></div>
+<figure class="abl">
+<figcaption class="mono">Why hybrid? Ablation</figcaption>
+<div><span>Without the rule-based core</span><b class="mono">0.90 acc · 850 ms avg</b></div>
+<div><span>Full hybrid</span><b class="mono">0.91 acc · 45 ms avg</b></div>
+</figure>
 </div>
 </article>
 </div>
@@ -281,24 +294,10 @@
 </div>
 </section>
 
-<section id="achievements" data-n="05">
+<section id="education" data-n="05">
 <div class="wrap">
-<h2>Achievements</h2>
-<dl class="log">
-<dt class="mono">Dec 2024 – Jan 2025</dt>
-<dd><strong>Space Lab Technical Intern · All India Rank 4</strong><span>India Space Lab. Drone technology and autonomous systems, CanSat and CubeSat programs, telemetry and space science modules.</span></dd>
-<dt class="mono">Leadership</dt>
-<dd><strong>Lead, Vitronix Club</strong><span>Coordinated teams to plan and run technical and non-technical events across the college.</span></dd>
-<dt class="mono">Hackathons</dt>
-<dd><strong>Health Hackathon, national finalist</strong><span>Team contribution across ideation, problem-solving and implementation.</span></dd>
-<dd><strong>Smart India Hackathon, problem-statement exploration</strong><span>Ideation, solution design and prototype development.</span></dd>
-</dl>
-</div>
-</section>
-
-<section id="education" data-n="06">
-<div class="wrap">
-<h2>Education</h2>
+<h2>Education &amp; Achievements</h2>
+<div class="edu-grid">
 <ol class="road" aria-label="Academic timeline">
 <li class="primary" style="--i:0">
 <b class="mono">2022 – 2026</b>
@@ -309,7 +308,7 @@
 <li style="--i:1">
 <b class="mono">12th Grade</b>
 <strong>FIITJEE Junior College, Hyderabad</strong>
-<span>Score: 88%</span>
+<span>Score: 89%</span>
 </li>
 <li style="--i:2">
 <b class="mono">10th Grade</b>
@@ -317,26 +316,35 @@
 <span>CGPA 10 / 10</span>
 </li>
 </ol>
+<div class="ach">
+<h3>Achievements</h3>
+<ul class="ach-list">
+<li><strong>Space Lab Technical Intern</strong><span class="mono">India Space Lab · Dec 2024 – Jan 2025</span></li>
+<li><strong>Lead, Vitronix Club</strong><span class="mono">Technical and non-technical events</span></li>
+<li><strong>Health Hackathon, national finalist</strong><span class="mono">Hackathon</span></li>
+<li><strong>Smart India Hackathon</strong><span class="mono">Problem-statement exploration</span></li>
+</ul>
+</div>
+</div>
 </div>
 </section>
 
-<section id="skills" data-n="07">
+<section id="skills" data-n="06">
 <div class="wrap">
 <h2>Skills</h2>
 <div class="skillgrid">
 <div class="scard"><h4>Languages</h4><p><span class="chip">Python</span></p></div>
-<div class="scard"><h4>ML Frameworks</h4><p><span class="chip">TensorFlow</span><span class="chip">PyTorch</span><span class="chip">Keras</span><span class="chip">Scikit-learn</span><span class="chip">CatBoost</span></p></div>
-<div class="scard"><h4>Data &amp; Vision</h4><p><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">OpenCV</span><span class="chip">MediaPipe</span></p></div>
-<div class="scard"><h4>NLP &amp; GenAI</h4><p><span class="chip">NLTK</span><span class="chip">Hugging Face</span><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">Prompt Engineering</span><span class="chip">Embeddings</span></p></div>
-<div class="scard"><h4>Vector Search &amp; Data</h4><p><span class="chip">FAISS</span><span class="chip">Qdrant</span><span class="chip">MySQL</span></p></div>
-<div class="scard"><h4>Tools &amp; Infrastructure</h4><p><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Docker</span><span class="chip">Jupyter</span><span class="chip">VS Code</span><span class="chip">PowerBI</span><span class="chip">PyQt5</span></p></div>
-<div class="scard"><h4>Core Concepts</h4><p><span class="chip">Machine Learning</span><span class="chip">Deep Learning</span><span class="chip">Neural Networks</span><span class="chip">Computer Vision</span><span class="chip">NLP</span><span class="chip">GenAI</span><span class="chip">OOP</span></p></div>
+<div class="scard"><h4>ML Frameworks</h4><p><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">Scikit-learn</span></p></div>
+<div class="scard"><h4>NLP &amp; GenAI</h4><p><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">Embeddings</span><span class="chip">Hugging Face</span><span class="chip">NLTK</span></p></div>
+<div class="scard"><h4>Vision &amp; Data</h4><p><span class="chip">OpenCV</span><span class="chip">MediaPipe</span><span class="chip">Pandas</span><span class="chip">NumPy</span></p></div>
+<div class="scard"><h4>Vector Search &amp; Data</h4><p><span class="chip">Qdrant</span><span class="chip">MySQL</span></p></div>
+<div class="scard"><h4>Engineering</h4><p><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">PowerBI</span><span class="chip">PyQt5</span></p></div>
 <div class="scard"><h4>Spoken</h4><p><span class="chip">English</span><span class="chip">Hindi</span><span class="chip">Telugu</span><span class="chip">Marathi</span></p></div>
 </div>
 </div>
 </section>
 
-<section id="about" data-n="08">
+<section id="about" data-n="07">
 <div class="wrap">
 <h2>About</h2>
 <div class="about-grid">
@@ -347,14 +355,13 @@
 <div class="facts">
 <div><b>01</b><span>IEEE publication</span></div>
 <div><b>04</b><span>Languages spoken</span></div>
-<div><b>AIR 4</b><span>National Space Lab selection</span></div>
 <div><b>8.49</b><span>B.Tech CGPA</span></div>
 </div>
 </div>
 </div>
 </section>
 
-<section id="contact" data-n="09">
+<section id="contact" data-n="08">
 <div class="wrap">
 <h2>Contact</h2>
 <p class="mail"><a href="mailto:charibhaskar2608@gmail.com">charibhaskar2608@gmail.com</a></p>

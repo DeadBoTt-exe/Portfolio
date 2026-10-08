@@ -30,7 +30,7 @@ raf=requestAnimationFrame(draw)}
 })();
 
 /* Contextual status line and active nav */
-const lab={home:'PORTFOLIO // READY',work:'VIEWING // PROJECT REGISTRY',research:'ACCESSING // RESEARCH',experience:'VIEWING // EXPERIENCE',achievements:'VIEWING // ACHIEVEMENTS',education:'VIEWING // EDUCATION',skills:'VIEWING // SKILLS',about:'VIEWING // ABOUT',contact:'OPEN // CONTACT'};
+const lab={home:'PORTFOLIO // READY',work:'VIEWING // PROJECT REGISTRY',research:'ACCESSING // RESEARCH',experience:'VIEWING // EXPERIENCE',education:'VIEWING // EDUCATION & ACHIEVEMENTS',skills:'VIEWING // SKILLS',about:'VIEWING // ABOUT',contact:'OPEN // CONTACT'};
 const so=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
 $('#status').textContent=lab[e.target.id];
 $$('.rail a').forEach(a=>a.toggleAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
@@ -56,7 +56,7 @@ pd.addEventListener('click',e=>{if(e.target===pd)pd.close()});
 (()=>{
 const d=$('#pal'),q=$('#palq'),l=$('#pall'),btn=$('#palbtn');
 $('#kbd').textContent=/Mac|iPhone|iPad/.test(navigator.platform)?'⌘ K':'Ctrl K';
-const I=[['Go to projects','projects work selected','#work'],['Go to research','research paper ieee publication','#research'],['Go to experience','experience drdo jrf nda','#experience'],['Go to achievements','achievements hackathons space lab vitronix leadership','#achievements'],['Go to education','education degree btech vit','#education'],['Go to skills','skills tools stack','#skills'],['Go to about','about','#about'],['Go to contact','contact email resume','#contact'],['DocuMind AI','documind rag qdrant gemini','#r1','r1'],['TarangAI','tarangai vision mediapipe dance','#r2','r2'],['SentimentR','sentimentr nlp sentiment llm','#r3','r3']];
+const I=[['Go to projects','projects work selected','#work'],['Go to research','research paper ieee publication','#research'],['Go to experience','experience drdo jrf nda','#experience'],['Go to education & achievements','education achievements degree btech vit hackathons space lab vitronix leadership','#education'],['Go to skills','skills tools stack','#skills'],['Go to about','about','#about'],['Go to contact','contact email resume','#contact'],['DocuMind AI','documind rag qdrant gemini','#r1','r1'],['SentimentR','sentimentr nlp sentiment llm','#r3','r3'],['TarangAI','tarangai vision mediapipe dance','#r2','r2']];
 let vis=I,ix=0;
 const draw=()=>{l.innerHTML=vis.length?'':'<li class="none">No match. Try "projects" or "research".</li>';
 vis.forEach((v,i)=>{const li=document.createElement('li');li.id='po'+i;li.setAttribute('role','option');li.setAttribute('aria-selected',i===ix);li.textContent=v[0];
