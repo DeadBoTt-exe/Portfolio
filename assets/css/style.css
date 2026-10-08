@@ -53,7 +53,7 @@ h1{font-size:clamp(3.4rem,11vw,8rem);line-height:.95;letter-spacing:-.02em}
 .pipe.on li{opacity:1;transform:none}
 
 /* TarangAI schematic: single static inline figure, no hover effects */
-.fig{max-width:300px;margin-bottom:1.5rem}
+.fig{max-width:380px;margin-bottom:1.5rem}
 #dancer{width:100%;height:auto;overflow:visible;display:block}
 .cap{color:var(--mu);margin:.5rem 0 0}
 
@@ -67,7 +67,7 @@ h1{font-size:clamp(3.4rem,11vw,8rem);line-height:.95;letter-spacing:-.02em}
 .bar:first-of-type i{background:var(--gr)}
 .bars:not(.on) i{transform:scaleX(0)}
 
-.paper-thumb{all:unset;cursor:pointer;display:block;width:100%;max-width:280px}
+.paper-thumb{all:unset;cursor:pointer;display:block;width:100%;max-width:460px}
 .pgs{display:grid;grid-template-columns:1fr;gap:1rem}
 .pg{display:block;aspect-ratio:.77;background:#fdfcf9;border-radius:3px;box-shadow:0 12px 30px -12px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.35);overflow:hidden;position:relative}
 .pg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
@@ -99,7 +99,7 @@ dialog::backdrop{background:rgba(5,6,7,.7)}
 .log dd+dd{grid-column:2}
 .log dd.drdo{display:flex;gap:1rem;align-items:flex-start}
 .log dd.drdo .org{display:block;color:var(--mu);font-weight:300}
-.orglogo{flex:none;background:#fff;border-radius:6px;padding:5px;border:1px solid var(--ln2)}
+.orglogo{flex:none;background:none;border:0;padding:0}
 
 /* education roadmap */
 .road{list-style:none;margin:0;padding:0 0 0 1.75rem;position:relative;max-width:680px}
@@ -151,7 +151,7 @@ dialog::backdrop{background:rgba(5,6,7,.7)}
 .hero-photo{display:block}
 }
 @media(min-width:800px){
-.paper{grid-template-columns:1.3fr .9fr;align-items:start}
+.paper{grid-template-columns:1fr 1fr;align-items:start}
 .about-grid{grid-template-columns:1.3fr .9fr}
 }
 @media(min-width:900px){
@@ -174,4 +174,4 @@ section::after{content:"";position:absolute;top:6.2rem;bottom:2rem;right:1.75rem
 .rp{padding-left:0}.hero{padding-top:9rem}.log dd.drdo{flex-direction:column}
 .facts{grid-template-columns:1fr 1fr}
 }
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;transition-delay:0s!important;animation:none!important;scroll-behavior:auto!important}.pipe li,.road li{opacity:1;transform:none}.bars:not(.on) i{transform:none}}   
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;transition-delay:0s!important;animation:none!important;scroll-behavior:auto!important}.pipe li,.road li{opacity:1;transform:none}.bars:not(.on) i{transform:none}}
