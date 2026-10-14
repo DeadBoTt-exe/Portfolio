@@ -202,3 +202,14 @@ section::after{content:"";position:absolute;top:6.2rem;bottom:2rem;right:1.75rem
 .facts{gap:1rem}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;transition-delay:0s!important;animation:none!important;scroll-behavior:auto!important}.pipe li,.road li{opacity:1;transform:none}.bars:not(.on) i{transform:none}}
+
+/* privacy page + footer link */
+.foot a{border-bottom:1px solid var(--ln2);transition:color .2s,border-color .2s}.foot a:hover{color:var(--tx);border-color:var(--cy)}
+.plain .top{left:0}.plain main,.plain .foot{margin-left:0;max-width:880px;padding-left:1.25rem;padding-right:1.25rem}
+@media(min-width:900px){.plain .top{left:0;padding:1.1rem 2rem}.plain main,.plain .foot{margin-left:auto;margin-right:auto;padding-left:3rem;padding-right:3rem}}
+.back{color:var(--cy)}.back:hover{color:var(--tx)}
+.legal{padding-top:7rem}
+.legal h3{font-size:1.5rem;margin:2.25rem 0 .6rem}
+.legal .prose{max-width:68ch}
+.legal ul{margin:0 0 1rem;padding-left:1.1rem;color:#bdbab3}.legal li{margin:.35rem 0}
+.legal .ext{margin:0;display:inline;color:var(--cy)}
