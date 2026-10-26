@@ -71,3 +71,38 @@ results/
 # -----------------------------
 .coverage
 htmlcov/
+
+# -----------------------------
+# Artifacts & Local analysis outputs
+# -----------------------------
+architecture-overview/
+graphify-out/
+.graphify_analysis.json
+docs/*.txt
+*.extracted.txt
+
+# -----------------------------
+# Local agent / browser tooling
+# -----------------------------
+.claude/settings.local.json
+.playwright-mcp/
+playwright-report/
+test-results/
+
+# -----------------------------
+# JavaScript dependencies / build output
+# -----------------------------
+node_modules/
+.npm/
+dist/
+build/
+.vercel/
+.netlify/
+
+# -----------------------------
+# Local credentials / private keys
+# -----------------------------
+*.pem
+*.key
+*.p12
+*.pfx

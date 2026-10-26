@@ -36,7 +36,7 @@
 <h1>Bhaskar Chari</h1>
 <p class="role">AI/ML Engineer</p>
 <p class="lede">I build intelligent systems for real-world problems.</p>
-<p class="focus">Generative AI · RAG · Computer Vision · NLP · Applied Research</p>
+
 <p class="mono meta">Junior Research Fellow, DRDO R&amp;DE(E)</p>
 </div>
 <div class="hero-photo"><img src="assets/img/image3.jpg" alt="Portrait of Bhaskar Chari" loading="eager" decoding="async"></div>
@@ -48,13 +48,13 @@
 <h2>Project Registry</h2>
 
 <article class="rec" id="r1">
-<button class="rh" aria-expanded="true" aria-controls="p1">
+<button class="rh" aria-expanded="false" aria-controls="p1">
 <span class="id mono">01</span>
 <span class="rt"><strong>DocuMind AI</strong><em>Validation-first RAG system for engineering documentation.</em></span>
 <span class="tg mono">RAG · Generative AI · Qdrant · Gemini</span>
-<span class="ar mono">View project →</span>
+<span class="ar mono"><span class="ar-label">View project</span><svg class="ar-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
 </button>
-<div class="rp" id="p1">
+<div class="rp" id="p1" hidden>
 <ol class="pipe" aria-label="DocuMind pipeline">
 <li style="--i:0"><span class="mono">Documents</span><small>Engineering documentation in</small></li>
 <li style="--i:1"><span class="mono">Chunking</span><small>Split with metadata attached</small></li>
@@ -78,7 +78,7 @@
 <span class="id mono">02</span>
 <span class="rt"><strong>SentimentR</strong><em>Hybrid sentiment analysis: rule-based heuristics routed to a fine-tuned LLM.</em></span>
 <span class="tg mono">NLP · LLM · Sentiment Analysis</span>
-<span class="ar mono">View project →</span>
+<span class="ar mono"><span class="ar-label">View project</span><svg class="ar-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
 </button>
 <div class="rp" id="p3" hidden>
 <ol class="pipe" aria-label="SentimentR pipeline">
@@ -103,7 +103,7 @@
 <span class="id mono">03</span>
 <span class="rt"><strong>TarangAI</strong><em>Classifies Indian classical dance styles from body pose and hand mudras.</em></span>
 <span class="tg mono">Computer Vision · MediaPipe · Deep Learning</span>
-<span class="ar mono">View project →</span>
+<span class="ar mono"><span class="ar-label">View project</span><svg class="ar-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
 </button>
 <div class="rp" id="p2" hidden>
 <div class="fig">
@@ -245,8 +245,8 @@
 <div class="paper-main">
 <p class="mono meta">IEEE CSNT 2026 · Published research</p>
 <h3>Cultural and Sarcastic Context Aware Sentimental Analysis with Large Language Model and Rule Based Heuristics: An Empirical Study</h3>
-<p class="authors">Umair Ullah, Hardik Rawat, Bhaskar Chari, Jay Vivek Yadav, Yuvraj Singh</p>
-<p class="aff">School of Computing Science and Engineering, VIT Bhopal University, Sehore, Madhya Pradesh, India</p>
+<p class="authors"><span class="author-label">Authors</span>Bhaskar Chari, Hardik Rawat, Jay Vivek Yadav, Umair Ullah, Yuvraj Singh</p>
+
 <p class="mono cite">2026 IEEE 15th International Conference on Communication Systems and Network Technologies (CSNT) · Al-Khobar, Saudi Arabia · 7–9 April 2026 · DOI 10.1109/CSNT69054.2026.11502364</p>
 <p class="body">Introduces SentimentR: a fast rule-based core paired with an LLM wrapper used only when text is ambiguous, sarcastic or culturally marked. My part: data gathering, preprocessing and prompt engineering. Evaluated on IMDb, SARC and Amazon Multilingual Reviews.</p>
 <figure class="bars">
@@ -387,12 +387,6 @@
 </main>
 
 <footer class="foot mono">© 2026 Bhaskar Chari · <a href="privacy.html">Privacy</a></footer>
-
-<button id="palbtn" class="palbtn" aria-haspopup="dialog"><span aria-hidden="true">⌕</span> Ask or navigate… <kbd class="mono" id="kbd">Ctrl K</kbd></button>
-<dialog id="pal" aria-label="Command palette">
-<input id="palq" type="text" role="combobox" aria-expanded="true" aria-controls="pall" aria-autocomplete="list" placeholder="Ask or navigate…" autocomplete="off" spellcheck="false">
-<ul id="pall" role="listbox"></ul>
-</dialog>
 
 <dialog id="paperDialog" aria-label="Paper preview">
 <button id="paperClose" class="dlgclose" type="button" aria-label="Close preview">&times;</button>
