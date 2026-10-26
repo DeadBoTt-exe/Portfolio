@@ -25,10 +25,17 @@ h2{font-size:clamp(2rem,4vw,2.75rem);margin-bottom:2rem;border-top:1px solid var
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:2.5rem;width:100%}
 .hero-text{max-width:640px}
 .hero-photo{display:none}
-.hero-photo img{display:block;width:100%;max-width:420px;margin:0 auto;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--ln2)}
+.hero-photo img{display:block;width:100%;max-width:420px;height:auto;margin:0 auto;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--ln2)}
 h1{font-size:clamp(3.4rem,11vw,8rem);line-height:.95;letter-spacing:-.02em}
-.role{font-size:1.35rem;margin:1.5rem 0 .5rem}.lede{color:var(--tx);margin:0 0 .25rem}
+.role{font-size:1.35rem;margin:1.5rem 0 .5rem}.lede{color:var(--tx);margin:0 0 .25rem;max-width:46ch}
 .focus{color:var(--mu);margin:0 0 1.5rem}.meta{color:var(--am);margin:0}
+
+/* hero actions */
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.btn{display:inline-block;padding:.65rem 1.25rem;border:1px solid var(--ln2);border-radius:6px;font-size:.95rem;font-weight:400;background:rgba(11,13,15,.6);transition:border-color .2s,background .2s,color .2s}
+.btn:hover{border-color:var(--cy)}
+.btn.pri{background:var(--cy);border-color:var(--cy);color:#0B0D0F;font-weight:500}
+.btn.pri:hover{background:var(--tx);border-color:var(--tx)}
 
 /* project records */
 .rec{border-top:1px solid var(--ln2)}.rec:last-child{border-bottom:1px solid var(--ln2)}
@@ -145,7 +152,8 @@ dialog::backdrop{background:rgba(5,6,7,.7)}
 /* skills */
 .skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2rem 2.5rem}
 .scard{border-top:1px solid var(--ln2);padding-top:1rem}
-.scard h4{font:400 .95rem 'IBM Plex Sans',sans-serif;margin:0 0 .8rem;color:var(--tx);letter-spacing:.02em}
+.scard h3{font:400 .95rem 'IBM Plex Sans',sans-serif;margin:0 0 .8rem;color:var(--tx);letter-spacing:.02em}
+.scard p{margin:0}
 .chip{--glow-a:120,184,199;--glow-b:120,184,199;display:inline-block;border:1px solid var(--ln2);border-radius:4px;padding:.18rem .55rem;margin:0 .35rem .4rem 0;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--mu);transition:color .2s,border-color .2s,box-shadow .2s,background .2s}
 .scard:hover .chip{border-color:#3a4046}
 .chip:hover{color:var(--tx);border-color:rgba(var(--glow-a),.6);background:rgba(var(--glow-a),.06);box-shadow:0 0 12px rgba(var(--glow-a),.18),0 0 18px rgba(var(--glow-b),.11)}
@@ -213,7 +221,8 @@ main,.foot{margin-left:var(--rail);padding-left:3rem;padding-right:3rem}
 @media(min-width:900px){.plain .top{left:0;padding:1.1rem 2rem}.plain main,.plain .foot{margin-left:auto;margin-right:auto;padding-left:3rem;padding-right:3rem}}
 .back{color:var(--cy)}.back:hover{color:var(--tx)}
 .legal{padding-top:7rem}
-.legal h3{font-size:1.5rem;margin:2.25rem 0 .6rem}
+.legal h1{font-size:clamp(2rem,4vw,2.75rem);line-height:inherit;letter-spacing:normal;margin-bottom:2rem;border-top:1px solid var(--ln2);padding-top:1rem}
+.legal .prose h2{font-size:1.5rem;margin:2.25rem 0 .6rem;border:0;padding:0}
 .legal .prose{max-width:68ch}
 .legal ul{margin:0 0 1rem;padding-left:1.1rem;color:#bdbab3}.legal li{margin:.35rem 0}
 .legal .ext{margin:0;display:inline;color:var(--cy)}
