@@ -52,13 +52,13 @@ pc.addEventListener('click',()=>pd.close());
 pd.addEventListener('click',e=>{if(e.target===pd)pd.close()});
 })();
 
-/* Command palette (navigate and search) */
+/* Jump-to palette (navigate sections and projects) */
 (()=>{
 const d=$('#pal'),q=$('#palq'),l=$('#pall'),btn=$('#palbtn');
 $('#kbd').textContent=/Mac|iPhone|iPad/.test(navigator.platform)?'⌘ K':'Ctrl K';
 const I=[['Go to projects','projects work selected','#work'],['Go to research','research paper ieee publication','#research'],['Go to experience','experience drdo jrf nda','#experience'],['Go to education & achievements','education achievements degree btech vit hackathons space lab vitronix leadership','#education'],['Go to skills','skills tools stack','#skills'],['Go to about','about','#about'],['Go to contact','contact email resume','#contact'],['DocuMind AI','documind rag qdrant gemini','#r1','r1'],['SentimentR','sentimentr nlp sentiment llm','#r3','r3'],['TarangAI','tarangai vision mediapipe dance','#r2','r2']];
 let vis=I,ix=0;
-const draw=()=>{l.innerHTML=vis.length?'':'<li class="none">No match. Try "projects" or "research".</li>';
+const draw=()=>{l.innerHTML=vis.length?'':'<li class="none">No match. This only jumps to sections and projects, e.g. "research", "DocuMind" or "contact".</li>';
 vis.forEach((v,i)=>{const li=document.createElement('li');li.id='po'+i;li.setAttribute('role','option');li.setAttribute('aria-selected',i===ix);li.textContent=v[0];
 li.onclick=()=>go(v);li.onmousemove=()=>{ix=i;sel()};l.appendChild(li)});
 q.setAttribute('aria-activedescendant',vis.length?'po'+ix:'')};

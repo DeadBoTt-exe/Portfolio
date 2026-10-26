@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=8">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -34,12 +34,17 @@
 <div class="hero-grid">
 <div class="hero-text">
 <h1>Bhaskar Chari</h1>
-<p class="role">AI/ML Engineer</p>
-<p class="lede">I build intelligent systems for real-world problems.</p>
+<p class="role">AI/ML Engineer &amp; Researcher</p>
+<p class="lede">I build retrieval, vision and language systems, and care about how they are evaluated.</p>
 <p class="focus">Generative AI · RAG · Computer Vision · NLP · Applied Research</p>
-<p class="mono meta">Junior Research Fellow, DRDO R&amp;DE(E)</p>
+<p class="mono meta">IEEE CSNT 2026 · Junior Research Fellow, DRDO R&amp;DE(E)</p>
+<div class="cta">
+<a class="btn pri" href="./BhaskarChari_AIMLEngineer_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+<a class="btn" href="#contact">Contact</a>
+<a class="btn" href="#research">Read the paper</a>
 </div>
-<div class="hero-photo"><img src="assets/img/image3.jpg" alt="Portrait of Bhaskar Chari" loading="eager" decoding="async"></div>
+</div>
+<div class="hero-photo"><img src="assets/img/image3.jpg" alt="Portrait of Bhaskar Chari" width="840" height="1120" fetchpriority="high" decoding="async"></div>
 </div>
 </section>
 
@@ -52,11 +57,12 @@
 <span class="id mono">01</span>
 <span class="rt"><strong>DocuMind AI</strong><em>Validation-first RAG system for engineering documentation.</em></span>
 <span class="tg mono">RAG · Generative AI · Qdrant · Gemini</span>
+<span class="own mono">Solo build · 72 unit tests</span>
 <span class="ar mono">View project →</span>
 </button>
 <div class="rp" id="p1">
 <ol class="pipe" aria-label="DocuMind pipeline">
-<li style="--i:0"><span class="mono">Documents</span><small>Engineering documentation in</small></li>
+<li style="--i:0"><span class="mono">Documents</span><small>Engineering documents ingested</small></li>
 <li style="--i:1"><span class="mono">Chunking</span><small>Split with metadata attached</small></li>
 <li style="--i:2"><span class="mono">Embeddings</span><small>all-mpnet-base-v2</small></li>
 <li style="--i:3"><span class="mono">Vector search</span><small>Qdrant, HNSW index</small></li>
@@ -78,6 +84,7 @@
 <span class="id mono">02</span>
 <span class="rt"><strong>SentimentR</strong><em>Hybrid sentiment analysis: rule-based heuristics routed to a fine-tuned LLM.</em></span>
 <span class="tg mono">NLP · LLM · Sentiment Analysis</span>
+<span class="own mono">IEEE paper · My part: data, preprocessing, prompts · 0.91 accuracy on SARC</span>
 <span class="ar mono">View project →</span>
 </button>
 <div class="rp" id="p3" hidden>
@@ -103,6 +110,7 @@
 <span class="id mono">03</span>
 <span class="rt"><strong>TarangAI</strong><em>Classifies Indian classical dance styles from body pose and hand mudras.</em></span>
 <span class="tg mono">Computer Vision · MediaPipe · Deep Learning</span>
+<span class="own mono">Built with a teammate · My part: data, dataset prep, model training</span>
 <span class="ar mono">View project →</span>
 </button>
 <div class="rp" id="p2" hidden>
@@ -259,7 +267,7 @@
 </div>
 <div class="paper-side">
 <button class="paper-thumb" id="paperOpen" type="button" aria-haspopup="dialog" aria-controls="paperDialog">
-<span class="pg"><img src="assets/img/1.png" alt="First page of the SentimentR paper" loading="lazy"></span>
+<span class="pg"><picture><source srcset="assets/img/1.webp" type="image/webp"><img src="assets/img/1.jpg" alt="First page of the SentimentR paper" loading="lazy" decoding="async"></picture></span>
 <span class="pg-cap mono">Page 1 preview · Click to read</span>
 </button>
 <div class="tablewrap"><table class="res">
@@ -336,13 +344,13 @@
 <div class="wrap">
 <h2>Skills</h2>
 <div class="skillgrid">
-<div class="scard"><h4>Languages</h4><p><span class="chip">Python</span></p></div>
-<div class="scard"><h4>ML Frameworks</h4><p><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">Scikit-learn</span></p></div>
-<div class="scard"><h4>NLP &amp; GenAI</h4><p><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">Embeddings</span><span class="chip">Hugging Face</span><span class="chip">NLTK</span></p></div>
-<div class="scard"><h4>Vision &amp; Data</h4><p><span class="chip">OpenCV</span><span class="chip">MediaPipe</span><span class="chip">Pandas</span><span class="chip">NumPy</span></p></div>
-<div class="scard"><h4>Vector Search &amp; Data</h4><p><span class="chip">Qdrant</span><span class="chip">MySQL</span></p></div>
-<div class="scard"><h4>Engineering</h4><p><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">PowerBI</span><span class="chip">PyQt5</span></p></div>
-<div class="scard"><h4>Spoken</h4><p><span class="chip">English</span><span class="chip">Hindi</span><span class="chip">Telugu</span><span class="chip">Marathi</span></p></div>
+<div class="scard"><h3>Programming</h3><p><span class="chip">Python</span></p></div>
+<div class="scard"><h3>ML Frameworks</h3><p><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">Scikit-learn</span></p></div>
+<div class="scard"><h3>NLP &amp; GenAI</h3><p><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">Embeddings</span><span class="chip">Hugging Face</span><span class="chip">NLTK</span></p></div>
+<div class="scard"><h3>Vision &amp; Data</h3><p><span class="chip">OpenCV</span><span class="chip">MediaPipe</span><span class="chip">Pandas</span><span class="chip">NumPy</span></p></div>
+<div class="scard"><h3>Vector Search &amp; Data</h3><p><span class="chip">Qdrant</span><span class="chip">MySQL</span></p></div>
+<div class="scard"><h3>Engineering</h3><p><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">PowerBI</span><span class="chip">PyQt5</span></p></div>
+<div class="scard"><h3>Spoken</h3><p><span class="chip">English</span><span class="chip">Hindi</span><span class="chip">Telugu</span><span class="chip">Marathi</span></p></div>
 </div>
 </div>
 </section>
@@ -385,24 +393,23 @@
 </div>
 </section>
 </main>
+<footer class="foot mono">© 2026 Bhaskar Chari · <a href="privacy.html">Privacy Policy</a></footer>
 
-<footer class="foot mono">© 2026 Bhaskar Chari · <a href="privacy.html">Privacy</a></footer>
-
-<button id="palbtn" class="palbtn" aria-haspopup="dialog"><span aria-hidden="true">⌕</span> Ask or navigate… <kbd class="mono" id="kbd">Ctrl K</kbd></button>
-<dialog id="pal" aria-label="Command palette">
-<input id="palq" type="text" role="combobox" aria-expanded="true" aria-controls="pall" aria-autocomplete="list" placeholder="Ask or navigate…" autocomplete="off" spellcheck="false">
+<button id="palbtn" class="palbtn" aria-haspopup="dialog"><span aria-hidden="true">⌕</span> Jump to… <kbd class="mono" id="kbd">Ctrl K</kbd></button>
+<dialog id="pal" aria-label="Jump to a section or project">
+<input id="palq" type="text" aria-label="Jump to a section or project" role="combobox" aria-expanded="true" aria-controls="pall" aria-autocomplete="list" placeholder="Jump to a section or project…" autocomplete="off" spellcheck="false">
 <ul id="pall" role="listbox"></ul>
 </dialog>
 
 <dialog id="paperDialog" aria-label="Paper preview">
 <button id="paperClose" class="dlgclose" type="button" aria-label="Close preview">&times;</button>
 <span class="pgs lg">
-<span class="pg"><img src="assets/img/1.png" alt="Page 1 of the SentimentR paper"></span>
-<span class="pg"><img src="assets/img/2.png" alt="Page 2 of the SentimentR paper"></span>
+<span class="pg"><picture><source srcset="assets/img/1.webp" type="image/webp"><img src="assets/img/1.jpg" alt="Page 1 of the SentimentR paper" loading="lazy" decoding="async"></picture></span>
+<span class="pg"><picture><source srcset="assets/img/2.webp" type="image/webp"><img src="assets/img/2.jpg" alt="Page 2 of the SentimentR paper" loading="lazy" decoding="async"></picture></span>
 </span>
 <a class="ext readmore" href="https://ieeexplore.ieee.org/document/11502364" target="_blank" rel="noopener">Read more on IEEE Xplore ↗</a>
 </dialog>
 
-<script src="assets/js/script.js"></script>
+<script src="assets/js/script.js?v=8"></script>
 </body>
 </html>
