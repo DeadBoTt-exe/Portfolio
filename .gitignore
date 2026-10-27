@@ -85,6 +85,7 @@ docs/*.txt
 # -----------------------------
 # Local agent / browser tooling
 # -----------------------------
+.impeccable/
 .claude/settings.local.json
 .playwright-mcp/
 playwright-report/
