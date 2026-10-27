@@ -35,7 +35,7 @@ const rail=$('.rail ol'),navLinks=$$('.rail a');
 function setActiveSection(id){
 const link=navLinks.find(a=>a.getAttribute('href')==='#'+id);
 if(!link)return;
-navLinks.forEach(a=>a.toggleAttribute('aria-current',a===link));
+navLinks.forEach(a=>a===link?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current'));
 $('#status').textContent=lab[id]||'PORTFOLIO // READY';
 if(matchMedia('(min-width: 900px)').matches){const linkRect=link.getBoundingClientRect(),railRect=rail.getBoundingClientRect();rail.style.setProperty('--active-y',`${linkRect.top-railRect.top+linkRect.height/2-10}px`)}
 }
@@ -54,17 +54,17 @@ function reveal(root){$$('.pipe,.bars,.road',root).forEach(el=>{if(RM)return el.
 new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){el.classList.add('on');o.disconnect()}}),{threshold:.3}).observe(el)})}
 reveal(document);
 
-/* Give each skill chip a faint brand-color hover glow. */
+/* Give each skill chip a faint brand-color hover tint. */
 (()=>{
 const colors={
-Python:['255,205,58','55,118,171'],PyTorch:['238,76,44'],TensorFlow:['255,145,55'],Keras:['210,55,55'],
-'Scikit-learn':['247,147,30','52,152,219'],LLMs:['135,120,235'],RAG:['120,184,199'],Embeddings:['100,190,180'],
-'Hugging Face':['255,190,45'],NLTK:['85,155,100'],OpenCV:['90,185,75'],MediaPipe:['50,190,150'],
-Pandas:['150,125,220'],NumPy:['75,130,190'],Qdrant:['220,65,65'],MySQL:['0,117,143'],
-FastAPI:['0,150,136'],Docker:['36,150,237'],Git:['240,80,51'],GitHub:['190,190,190'],PowerBI:['245,190,40'],PyQt5:['65,155,90'],
-English:['120,184,199'],Hindi:['245,155,70'],Telugu:['120,184,199'],Marathi:['120,184,199']
+Python:'255,205,58',PyTorch:'238,76,44',TensorFlow:'255,145,55',Keras:'210,55,55',
+'Scikit-learn':'247,147,30',LLMs:'135,120,235',RAG:'120,184,199',Embeddings:'100,190,180',
+'Hugging Face':'255,190,45',NLTK:'85,155,100',OpenCV:'90,185,75',MediaPipe:'50,190,150',
+Pandas:'150,125,220',NumPy:'75,130,190',Qdrant:'220,65,65',MySQL:'0,117,143',
+FastAPI:'0,150,136',Docker:'36,150,237',Git:'240,80,51',GitHub:'190,190,190',PowerBI:'245,190,40',PyQt5:'65,155,90',
+English:'120,184,199',Hindi:'245,155,70',Telugu:'120,184,199',Marathi:'120,184,199'
 };
-$$('.chip').forEach(chip=>{const pair=colors[chip.textContent.trim()];if(pair){chip.style.setProperty('--glow-a',pair[0]);chip.style.setProperty('--glow-b',pair[1]||pair[0])}})
+$$('.chip').forEach(chip=>{const rgb=colors[chip.textContent.trim()];if(rgb)chip.style.setProperty('--glow-a',rgb)})
 })();
 
 /* Paper preview dialog */
@@ -75,4 +75,3 @@ po.addEventListener('click',()=>pd.showModal());
 pc.addEventListener('click',()=>pd.close());
 pd.addEventListener('click',e=>{if(e.target===pd)pd.close()});
 })();
-
