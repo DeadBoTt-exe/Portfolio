@@ -31,10 +31,21 @@ raf=requestAnimationFrame(draw)}
 
 /* Contextual status line and active nav */
 const lab={home:'PORTFOLIO // READY',work:'VIEWING // PROJECT REGISTRY',research:'ACCESSING // RESEARCH',experience:'VIEWING // EXPERIENCE',education:'VIEWING // EDUCATION & ACHIEVEMENTS',skills:'VIEWING // SKILLS',about:'VIEWING // ABOUT',contact:'OPEN // CONTACT'};
+const rail=$('.rail ol'),navLinks=$$('.rail a');
+function setActiveSection(id){
+const link=navLinks.find(a=>a.getAttribute('href')==='#'+id);
+if(!link)return;
+navLinks.forEach(a=>a.toggleAttribute('aria-current',a===link));
+$('#status').textContent=lab[id]||'PORTFOLIO // READY';
+if(matchMedia('(min-width: 900px)').matches){const linkRect=link.getBoundingClientRect(),railRect=rail.getBoundingClientRect();rail.style.setProperty('--active-y',`${linkRect.top-railRect.top+linkRect.height/2-10}px`)}
+}
 const so=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
-$('#status').textContent=lab[e.target.id];
-$$('.rail a').forEach(a=>a.toggleAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+setActiveSection(e.target.id)}),{rootMargin:'-45% 0px -50% 0px'});
 $$('main section[id]').forEach(s=>so.observe(s));
+function syncBottomSection(){if(innerHeight+scrollY>=document.documentElement.scrollHeight-2)setActiveSection('contact')}
+addEventListener('scroll',syncBottomSection,{passive:true});
+addEventListener('resize',()=>{const active=$('.rail a[aria-current]');if(active)setActiveSection(active.hash.slice(1))});
+setActiveSection('home');syncBottomSection();
 
 /* Project records */
 function setRec(r,open){const b=$('.rh',r),p=$('.rp',r);b.setAttribute('aria-expanded',open);$('.ar-label',b).textContent=open?'Hide details':'View project';p.hidden=!open;if(open)reveal(p)}
